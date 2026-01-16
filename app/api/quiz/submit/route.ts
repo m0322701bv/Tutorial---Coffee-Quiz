@@ -27,13 +27,22 @@ export async function POST(request: NextRequest) {
 
     console.log("[Quiz Submit] Saving to Firebase...");
 
-    // Save to quiz_results collection
-    const docId = await saveQuizResult({
-      memberId,
+    // Build result object, excluding undefined values (Firebase doesn't allow them)
+    const resultData: Record<string, unknown> = {
       personality,
       scores,
       answers: answers || [],
-      duration,
+    };
+    if (memberId) resultData.memberId = memberId;
+    if (duration !== undefined) resultData.duration = duration;
+
+    // Save to quiz_results collection
+    const docId = await saveQuizResult(resultData as {
+      memberId?: string;
+      personality: string;
+      scores: Record<string, number>;
+      answers: Array<{ questionIndex: number; answerId: string; personality: string }>;
+      duration?: number;
     });
 
     console.log("[Quiz Submit] Saved with ID:", docId);
