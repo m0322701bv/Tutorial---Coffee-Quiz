@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style 4: Warm & Cozy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #f5e6d3 0%, #eddcc9 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .style-label {
+            background: #8b6f47;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .quiz-card {
+            background: #fffbf5;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(139, 111, 71, 0.15);
+        }
+        .progress {
+            text-align: center;
+            font-size: 14px;
+            color: #a08060;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #5c4530;
+            margin-bottom: 35px;
+            font-weight: 500;
+            line-height: 1.4;
+            text-align: center;
+        }
+        .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .answer {
+            padding: 18px 24px;
+            border-radius: 12px;
+            border: 2px solid #e8dcc8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 400;
+            color: #6b5640;
+            background: #fffdf9;
+            text-align: center;
+        }
+        .answer:hover {
+            border-color: #8b6f47;
+            background: linear-gradient(135deg, #f5e6d3 0%, #eddcc9 100%);
+            transform: scale(1.02);
+        }
+        .coffee-icon {
+            display: block;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="style-label">Style 4: Warm & Cozy</div>
+    <div class="quiz-card">
+        <div class="coffee-icon">☕</div>
+        <div class="progress">Question 2 of 5</div>
+        <h1>It's Saturday morning. What's your vibe?</h1>
+        <div class="answers">
+            <div class="answer">Already at the gym or on a hike</div>
+            <div class="answer">Slow morning with a book</div>
+            <div class="answer">Making an elaborate brunch</div>
+            <div class="answer">Sleeping in, obviously</div>
+            <div class="answer">Catching up on everything</div>
+        </div>
+    </div>
+</body>
+</html>

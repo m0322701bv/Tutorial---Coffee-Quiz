@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style 1: Playful & Colorful</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .style-label {
+            background: white;
+            color: #764ba2;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .quiz-card {
+            background: white;
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .progress {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e0e0e0;
+        }
+        .progress-dot.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+        .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .answer {
+            padding: 20px 25px;
+            border-radius: 20px;
+            border: 3px solid #e8e8e8;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            font-weight: 600;
+            color: #555;
+        }
+        .answer:hover {
+            border-color: #764ba2;
+            background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+            transform: translateY(-2px);
+        }
+        .emoji {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="style-label">Style 1: Playful & Colorful</div>
+    <div class="quiz-card">
+        <div class="progress">
+            <div class="progress-dot active"></div>
+            <div class="progress-dot active"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+        </div>
+        <h1>It's Saturday morning. What's your vibe?</h1>
+        <div class="answers">
+            <div class="answer"><span class="emoji">🏃</span> Already at the gym or on a hike</div>
+            <div class="answer"><span class="emoji">📖</span> Slow morning with a book</div>
+            <div class="answer"><span class="emoji">🥞</span> Making an elaborate brunch</div>
+            <div class="answer"><span class="emoji">😴</span> Sleeping in, obviously</div>
+            <div class="answer"><span class="emoji">📱</span> Catching up on everything</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style 3: Bold & Dramatic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            min-height: 100vh;
+            background: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .style-label {
+            background: #ff3366;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .quiz-card {
+            background: #151515;
+            border: 2px solid #333;
+            padding: 50px;
+            max-width: 550px;
+            width: 100%;
+        }
+        .progress {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        .progress-bar {
+            flex: 1;
+            height: 4px;
+            background: #333;
+        }
+        .progress-bar.active {
+            background: linear-gradient(90deg, #ff3366, #ff6b3d);
+        }
+        h1 {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 40px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        .answers {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .answer {
+            padding: 20px 24px;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 16px;
+            font-weight: 500;
+            color: #ccc;
+            background: transparent;
+        }
+        .answer:hover {
+            border-color: #ff3366;
+            color: #fff;
+            background: rgba(255, 51, 102, 0.1);
+            transform: translateX(5px);
+        }
+        .answer-number {
+            color: #ff3366;
+            margin-right: 15px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="style-label">Style 3: Bold & Dramatic</div>
+    <div class="quiz-card">
+        <div class="progress">
+            <div class="progress-bar active"></div>
+            <div class="progress-bar active"></div>
+            <div class="progress-bar"></div>
+            <div class="progress-bar"></div>
+            <div class="progress-bar"></div>
+        </div>
+        <h1>It's Saturday morning. What's your vibe?</h1>
+        <div class="answers">
+            <div class="answer"><span class="answer-number">01</span>Already at the gym or on a hike</div>
+            <div class="answer"><span class="answer-number">02</span>Slow morning with a book</div>
+            <div class="answer"><span class="answer-number">03</span>Making an elaborate brunch</div>
+            <div class="answer"><span class="answer-number">04</span>Sleeping in, obviously</div>
+            <div class="answer"><span class="answer-number">05</span>Catching up on everything</div>
+        </div>
+    </div>
+</body>
+</html>
