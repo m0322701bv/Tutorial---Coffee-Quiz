@@ -128,7 +128,8 @@ export default function Home() {
     duration: number
   ) => {
     try {
-      await fetch("/api/quiz/submit", {
+      console.log("Submitting quiz result:", { personality, scores, duration });
+      const res = await fetch("/api/quiz/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -138,8 +139,10 @@ export default function Home() {
           duration,
         }),
       });
+      const data = await res.json();
+      console.log("Quiz submit response:", res.status, data);
     } catch (error) {
-      console.log("Failed to submit quiz result", error);
+      console.error("Failed to submit quiz result:", error);
     }
   };
 
